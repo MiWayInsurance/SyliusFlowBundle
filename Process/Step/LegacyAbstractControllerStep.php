@@ -21,7 +21,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  *
  * Step class which extends the base Symfony2 controller.
  *
- * @author Paweł Jędrzejewski <pawel@sylius.org>
+ * @author MiWay Developers <developers@miway.co.za>
  */
 abstract class LegacyAbstractControllerStep extends Controller implements StepInterface
 {
