@@ -12,15 +12,18 @@
 namespace Sylius\Bundle\FlowBundle\Process\Step;
 
 use Sylius\Bundle\FlowBundle\Process\Context\ProcessContextInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+@trigger_error(sprintf('The "%s" class is deprecated', LegacyAbstractControllerStep::class), E_USER_DEPRECATED);
 
 /**
- * Step class which extends the base Symfony abstract controller.
+ * @deprecated use the {@see AbstractControllerStep} instead
+ *
+ * Step class which extends the base Symfony2 controller.
  *
  * @author Paweł Jędrzejewski <pawel@sylius.org>
- * @author MiWay Developers <developers@miway.co.za>
  */
-abstract class AbstractControllerStep extends AbstractController implements StepInterface
+abstract class LegacyAbstractControllerStep extends Controller implements StepInterface
 {
     /**
      * Step name in current scenario.
