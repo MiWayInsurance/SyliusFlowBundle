@@ -11,7 +11,6 @@
 
 namespace Sylius\Bundle\FlowBundle\Process\Coordinator;
 
-use FOS\RestBundle\View\View;
 use Sylius\Bundle\FlowBundle\Process\Builder\ProcessBuilderInterface;
 use Sylius\Bundle\FlowBundle\Process\Context\ProcessContextInterface;
 use Sylius\Bundle\FlowBundle\Process\ProcessInterface;
@@ -143,7 +142,7 @@ class Coordinator implements CoordinatorInterface
      */
     public function processStepResult(ProcessInterface $process, $result)
     {
-        if ($result instanceof Response || $result instanceof View) {
+        if ($result instanceof Response) {
             return $result;
         }
 

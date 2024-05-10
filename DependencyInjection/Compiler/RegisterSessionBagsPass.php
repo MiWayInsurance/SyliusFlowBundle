@@ -27,7 +27,7 @@ class RegisterSessionBagsPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $session = $container->getDefinition('session');
+        $session = $container->getDefinition('.session.do-not-use');
         $session->addMethodCall('registerBag', [new Reference('sylius.process_storage.session.bag')]);
     }
 }

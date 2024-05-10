@@ -1,7 +1,7 @@
 {
     "name": "sylius/flow-bundle",
     "type": "symfony-bundle",
-    "description": "Multiple action setups for Symfony2, build your checkouts/installers or whatever needs more than one step to complete.",
+    "description": "Multiple action setups for Symfony, build your checkouts/installers or whatever needs more than one step to complete.",
     "keywords": ["checkout", "flow", "installation", "steps"],
     "homepage": "http://sylius.org",
     "license": "MIT",
@@ -21,11 +21,11 @@
     ],
     "require": {
         "php": "^7.0",
-        "symfony/framework-bundle": "^3.3 || ^4.0"
+        "symfony/framework-bundle": "^4.4 || ^5.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.0",
-        "symfony/yaml": "~2.1"
+        "phpspec/phpspec": "^6.3",
+        "symfony/yaml": "^4.4 || ^5.0"
     },
     "config": {
         "bin-dir": "bin"
@@ -38,12 +38,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../*/*"
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
